@@ -1,0 +1,189 @@
+/* Reset Styles */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Base Styles */
+
+html {
+  min-width: 350px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  background-color: #ff608c;
+  position: relative;
+  color: rgb(37, 29, 32);
+}
+
+a {
+  color: rgb(37, 29, 32);
+}
+
+/* Utility Styles */
+
+.bold {
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a.underline:hover {
+  text-decoration: none;
+}
+
+/* Content Styles */
+
+#logo {
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 1.25rem 0.9375rem;
+}
+
+#contact {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1.375rem 0.9375rem;
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+#description {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 320px;
+  margin: 1.125rem 1.375rem;
+  line-height: 1.4;
+  font-size: 1.125rem;
+}
+
+#copyright-text {
+  font-size: 0.75rem;
+  margin-top: 0.4rem;
+  margin-bottom: 1.75rem;
+}
+
+#issues {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 1.125rem 0.9375rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 1rem 1rem 3.25rem 1rem;
+}
+
+.page img {
+  width: 90%;
+  max-width: 420px;
+}
+
+.page .name {
+  font-size: 1.125rem;
+  padding-bottom: 1.125rem;
+}
+
+.page p:last-child {
+  padding-top: 1.125rem;
+}
+
+.page a {
+  color: #fff;
+  transition: color 0.5s ease-in-out;
+}
+
+body[class~="white-bg"] .page a {
+  color: #e568ac;
+}
+
+body {
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* Media Queries */
+
+@media (max-width: 990px) {
+  body {
+    overflow-y: visible;
+  }
+
+  #issues {
+    display: none;
+  }
+
+  #logo {
+    position: absolute;
+  }
+
+  #description,
+  #contact {
+    position: static;
+    margin: 0;
+  }
+
+  #description {
+    width: 30%;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 1rem 1.125rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #logo {
+    width: 160px;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3.25rem;
+    margin-bottom: 3.25rem;
+  }
+
+  #description {
+    width: auto;
+  }
+}
